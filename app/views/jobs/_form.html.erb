@@ -1,16 +1,8 @@
-<%= form_for @job do |f| %>
+<%= simple_form_for @job do |f| %>
 
-<div class="form-jib">
-    <div class="form-job string optional">
-        <%= f.label "职位", :class => "string optional control-label" %>
-        <%= f.text_field :title, :class => "string optional form-control" %>
+  <div class="form-job">
+      <%= f.input :title, input_html: { class: "form-control"} %>
+      <%= f.input :description, input_html: { class: "form-control"} %>
     </div>
-
-    <div class="form-job string optional">
-        <%= f.label "职位详情", :class => "string optional control-label" %>
-        <%= f.text_area :description, :class => "string optional form-control" %>
-    </div>
-
-</div>
-<%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submitting..." } %>
-<% end %>
+    <%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submiting..." } %>
+  <% end %>
