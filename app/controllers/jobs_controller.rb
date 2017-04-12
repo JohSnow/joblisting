@@ -29,6 +29,12 @@ class JobsController < ApplicationController
     redirect_to jobs_path, notice: "更新成功！"
   end
 
+  def destroy
+    @job = Job.find(params[:id])
+    @job.destroy
+    redirect_to jobs_path, alert: "职位已删除！"
+  end
+
 
   private
 
