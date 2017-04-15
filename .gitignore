@@ -21,4 +21,4 @@
 .byebug_history
 
 # Ignore the resumes files
-pubic/uploads
+public/uploads
